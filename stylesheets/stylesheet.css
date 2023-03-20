@@ -1,1 +1,6 @@
-
+.squareList {
+    list-style-type: square;
+    }
+    .circleList {
+    list-style-type: circle;
+    }

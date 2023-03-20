@@ -47,13 +47,20 @@ const ullist = document.querySelector(".shopping")
 
 function populateList(shoppingListArray){
     //1 for each item in the shoppingListArray, add a list item with its value
-    for (let item of shoppingListArray);
+    for (let item of shoppingListArray) {
     //2 Create a new Li
-    const newli = document.createElement("li")
+    const newli = document.createElement("li");
         //3 update the Li's text using item
         newli.textContent = item;
         ullist.appendChild(newli);
+    }
 }
 
 let myShoppingList = ["Cheese","Bread","Green Pepper"]
-populateList(myShoppingList)
+populateList(myShoppingList);
+
+function squareListMaker() {
+    ullist.classList.add("squareList");
+    ullist.classList.remove("circleList");
+}
+squareListMaker()
