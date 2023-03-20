@@ -20,10 +20,26 @@
 
 // greet('Howard', 'night')
 
+const radiusPara = document.querySelector("#radius");
+console.log(radiusPara)
+const resultPara = document.querySelector("#result");
+console.log(resultPara)
+
 function circleArea(radius){
+    if(isNaN(radius)){
+        // alert("This is not a string")
+        // update the textConent of innerText property of resultPara
+        resultPara.textContent = "This is not a number"
+    } else {
     area = Math.PI*radius*radius;
     return area;
+    }
 }
-let input = prompt("Enter a raidus")
+let input = prompt("Enter a raidus ")
+radiusPara.textContent = radiusPara.textContent += input
+
 let result = circleArea(input)
-alert(`The area of a circle with a radius of ${radius} is ${result}`)
+//Show an alert message with both values, radius and area.
+if (result !== undefined){}
+// alert(`The area of a circle with a radius of ${radius} is ${result}`)
+resultPara.textContent = `The radius is ${input} and the area is ${area}`
